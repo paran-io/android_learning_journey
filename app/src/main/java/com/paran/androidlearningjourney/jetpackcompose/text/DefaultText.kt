@@ -15,37 +15,24 @@ import androidx.compose.ui.unit.sp
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
- fun Text() {
+fun Text() {
 
-    Column(modifier = Modifier.fillMaxSize()
-        .padding(16.dp),
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement =Arrangement.Center
+        verticalArrangement = Arrangement.Center
 
 
     ) {
-        Text(text = "🚀 Ultimate Android Learning Journey",
+        Text(
+            text = "🚀 Ultimate Android Learning Journey",
             fontSize = 18.sp,
-            fontWeight = FontWeight.Bold)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            fontWeight = FontWeight.Bold
+        )
 
     }
 
 
-    
 }
