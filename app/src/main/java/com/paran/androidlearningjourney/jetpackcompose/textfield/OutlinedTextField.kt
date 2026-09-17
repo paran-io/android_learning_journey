@@ -58,7 +58,7 @@ fun OutlinedTextFieldExample() {
                 unfocusedTextColor = Color.Black,
                 focusedLabelColor =Color.Blue,
                 unfocusedLabelColor = Color.Black,
-                focusedContainerColor = Color.LightGray,
+                focusedContainerColor = Color.White.copy(alpha = 0.5f ),
                 unfocusedContainerColor = Color.White.copy(alpha = 0.5f ),
                 focusedPlaceholderColor =Color.Magenta,
                 unfocusedPlaceholderColor = Color.Black,
@@ -107,9 +107,9 @@ fun OutlinedTextFieldExample() {
             colors = TextFieldDefaults.colors(
                 focusedTextColor = Color.Black,
                 unfocusedTextColor = Color.Transparent,
-                focusedLabelColor = Color.Cyan,
+                focusedLabelColor = Color.Blue,
                 unfocusedLabelColor = Color.Blue,
-                focusedContainerColor = Color.LightGray,
+                focusedContainerColor = Color.White.copy(alpha = 0.5f ),
                 unfocusedContainerColor = Color.Transparent,
                 focusedPlaceholderColor = Color.Magenta,
                 unfocusedPlaceholderColor = Color.Black,
@@ -128,20 +128,26 @@ fun OutlinedTextFieldExample() {
 
         )
 
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(15.dp))
 
         Button(onClick = {},
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth()
+                .height(50.dp),
             shape = RoundedCornerShape(10.dp),
-            colors = ButtonDefaults.buttonColors(containerColor =Color.DarkGray,
-                contentColor = Color.White)
+            colors = ButtonDefaults.buttonColors(containerColor =Color.Blue.copy(alpha = 0.8f),
+                contentColor = Color.White,
+
+
+
+            )
 
 
 
 
         ) {
             Text(
-                text = "Login Button"
+                text = "Login Button",
+                fontSize = 20.sp
             )
 
 
