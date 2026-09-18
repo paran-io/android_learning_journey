@@ -97,8 +97,8 @@ fun OutlinedTextFieldExample() {
             onValueChange = {password=it},
             enabled = true,
             modifier = Modifier.fillMaxWidth(),
-            label = {Text(text = "  Enter your email")},
-            placeholder = {Text("Please Enter your email")},
+            label = {Text(text = "  Enter your password")},
+            placeholder = {Text("Please Enter your password")},
             leadingIcon = {
                 Icon(imageVector = Icons.Default.LockOpen, contentDescription = null)
             },
@@ -108,7 +108,7 @@ fun OutlinedTextFieldExample() {
                 focusedTextColor = Color.Black,
                 unfocusedTextColor = Color.Transparent,
                 focusedLabelColor = Color.Blue,
-                unfocusedLabelColor = Color.Blue,
+                unfocusedLabelColor = Color.Black,
                 focusedContainerColor = Color.White.copy(alpha = 0.5f ),
                 unfocusedContainerColor = Color.Transparent,
                 focusedPlaceholderColor = Color.Magenta,
@@ -147,7 +147,7 @@ fun OutlinedTextFieldExample() {
         ) {
             Text(
                 text = "Login Button",
-                fontSize = 20.sp
+                fontSize = 18.sp
             )
 
 
