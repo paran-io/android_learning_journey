@@ -42,7 +42,6 @@ fun RowExample() {
         verticalArrangement = Arrangement.Center )
 
 
-
         {
 
 
@@ -91,7 +90,11 @@ fun RowExample() {
                 )
 
                 IconButton(
-                    onClick = {},
+                    onClick = {Toast.makeText(
+                        context, " Learn Jetpack Compose with Paran 🚀",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    },
 
 
                     ) {
@@ -138,5 +141,6 @@ fun RowExample() {
             }
 
         }
+
 
 
