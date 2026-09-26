@@ -1,8 +1,12 @@
 package com.paran.androidlearningjourney.jetpackcompose.layout
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -18,34 +22,45 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun BoxExample() {
 
-    Box(
-        modifier = Modifier
-            .width(200.dp)
-            .height(400.dp)
-            .background(
-                color = Color.LightGray,
-                shape = RoundedCornerShape(16.dp)
-            )
+
+    Column(
+        modifier = Modifier.fillMaxSize()
+            .padding(10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
 
-        Text(
-            text = "Value 01",
-            fontSize = 24.sp,
-            modifier = Modifier.align(Alignment.Center)
-        )
 
-        Text(
-            text = "Value 02",
-            fontSize = 24.sp,
-            modifier = Modifier.align(Alignment.BottomStart)
-        )
+        Box(
+            modifier = Modifier
+                .width(200.dp)
+                .height(400.dp)
+                .background(
+                    color = Color.LightGray,
+                    shape = RoundedCornerShape(16.dp)
+                )
+                .padding(15.dp)
+        ) {
 
-        Text(
-            text = "Value 03",
-            fontSize = 24.sp,
-            modifier = Modifier.align(Alignment.TopEnd)
-        )
+            Text(
+                text = "App",
+                fontSize = 24.sp,
+                modifier = Modifier.align(Alignment.TopEnd)
+            )
+
+            Text(
+                text = "KMP",
+                fontSize = 24.sp,
+                modifier = Modifier.align(Alignment.Center)
+            )
+
+            Text(
+                text = "CMP",
+                fontSize = 24.sp,
+                modifier = Modifier.align(Alignment.BottomStart)
+            )
+
+        }
 
     }
-
 }
