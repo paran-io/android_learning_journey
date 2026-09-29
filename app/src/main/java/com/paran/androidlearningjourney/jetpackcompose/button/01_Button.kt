@@ -1,10 +1,9 @@
 package com.paran.androidlearningjourney.jetpackcompose.button
 
-
 import android.widget.Toast
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,9 +16,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,7 +37,7 @@ import androidx.compose.ui.unit.sp
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun OutlinedButtonExample() {
+fun ButtonExample() {
 
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -82,8 +81,7 @@ fun OutlinedButtonExample() {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-
-        OutlinedButton(
+        Button(
             onClick = {
                 Toast.makeText(
                     context,
@@ -91,13 +89,20 @@ fun OutlinedButtonExample() {
                     Toast.LENGTH_SHORT
                 ).show()
             },
-            modifier = Modifier.fillMaxWidth(),
-            // enabled = username.isNotBlank() && password.isNotBlank(),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = Color.Black
+             //enabled = username.isNotBlank() && password.isNotBlank(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(52.dp),
+            shape = RoundedCornerShape(8.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.Black,
+                contentColor = Color.White
             ),
-            contentPadding = PaddingValues(16.dp)
+            elevation = ButtonDefaults.buttonElevation(
+                defaultElevation = 19.dp,
+                 pressedElevation = 16.dp
+            ),
+             border = BorderStroke(3.dp, Color.Blue),
         ) {
 
             Row(
@@ -106,7 +111,7 @@ fun OutlinedButtonExample() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
 
-                if (username.isNotBlank() && password.isNotBlank()) {
+                if (username.isNotBlank() && password.isNotBlank()){
                     Icon(
                         imageVector = Icons.Default.LockOpen,
                         contentDescription = "Unlocked",
